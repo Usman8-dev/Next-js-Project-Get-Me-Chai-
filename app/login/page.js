@@ -1,5 +1,6 @@
-// Login.jsx
+"use client"
 import React from "react";
+import { useSession, signIn, signOut } from "next-auth/react"
 
 const Login = () => {
   return (
@@ -26,6 +27,20 @@ const Login = () => {
 
           {/* Social Login Buttons */}
           <div className="space-y-4">
+
+            {/* GitHub */}
+            <button onClick={()=>{signIn("github")}} className="w-full flex items-center justify-center gap-3 bg-black text-white py-4 rounded-2xl hover:bg-gray-900 transition-all">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.866-.014-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.91-1.295 2.75-1.026 2.75-1.026.544 1.376.202 2.393.1 2.646.64.698 1.03 1.591 1.03 2.682 0 3.841-2.338 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.42 22 12c0-5.523-4.477-10-10-10z" />
+              </svg>
+              <span className="font-medium">Continue with GitHub</span>
+            </button>
+            
             {/* Google */}
             <button className="w-full flex items-center justify-center gap-3 bg-white border border-gray-300 hover:border-gray-400 py-4 rounded-2xl transition-all hover:shadow-md">
               <svg
@@ -95,18 +110,6 @@ const Login = () => {
               <span className="font-medium">Continue with X</span>
             </button>
 
-            {/* GitHub */}
-            <button className="w-full flex items-center justify-center gap-3 bg-black text-white py-4 rounded-2xl hover:bg-gray-900 transition-all">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.866-.014-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.91-1.295 2.75-1.026 2.75-1.026.544 1.376.202 2.393.1 2.646.64.698 1.03 1.591 1.03 2.682 0 3.841-2.338 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.42 22 12c0-5.523-4.477-10-10-10z" />
-              </svg>
-              <span className="font-medium">Continue with GitHub</span>
-            </button>
 
             {/* LinkedIn */}
             <button className="w-full flex items-center justify-center gap-3 bg-[#0A66C2] text-white py-4 rounded-2xl hover:bg-[#0956a3] transition-all">

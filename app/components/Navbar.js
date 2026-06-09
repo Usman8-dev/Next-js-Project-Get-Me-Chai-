@@ -1,7 +1,16 @@
+"use client"
 import React from 'react';
 import Link from 'next/link';
+import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function Navbar() {
+   const { data: session } = useSession()
+  if(session) {
+    return <>
+      Signed in as {session.user.email} <br/>
+      <button onClick={() => signOut()}>Sign out</button>
+    </>
+  }
   return (
     <nav className="bg-gradient-to-r from-amber-900 via-black to-black text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
@@ -34,7 +43,7 @@ export default function Navbar() {
           
           <Link href= {'/login'}> 
           <button className="px-6 py-2.5 border border-white/70 hover:border-white hover:bg-white/10 font-medium rounded-full transition-all duration-300">
-            Login
+             Login
           </button></Link>
 
           {/* Mobile Hamburger */}
