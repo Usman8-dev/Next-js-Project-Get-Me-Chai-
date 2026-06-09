@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
@@ -18,7 +19,8 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-10 text-lg">
-          <li className="hover:text-amber-400 transition-colors cursor-pointer font-medium">Home</li>
+          <li className="hover:text-amber-400 transition-colors cursor-pointer font-medium"> 
+            <a href="/">Home</a></li>
           <li className="hover:text-amber-400 transition-colors cursor-pointer font-medium">Menu</li>
           <li className="hover:text-amber-400 transition-colors cursor-pointer font-medium">About</li>
           <li className="hover:text-amber-400 transition-colors cursor-pointer font-medium">Contact</li>
@@ -30,9 +32,10 @@ export default function Navbar() {
             Order Now
           </button>
           
+          <Link href= {'/login'}> 
           <button className="px-6 py-2.5 border border-white/70 hover:border-white hover:bg-white/10 font-medium rounded-full transition-all duration-300">
             Login
-          </button>
+          </button></Link>
 
           {/* Mobile Hamburger */}
           <button className="md:hidden text-3xl">
