@@ -31,7 +31,7 @@ export default function Home() {
           
           {/* Logo / Cup Image */}
           <div className="flex justify-center items-center">
-             <h1 className="font-bold text-5xl md:text-6xl text-amber-950 tracking-tight">
+             <h1 className="font-bold text-5xl md:text-6xl text-amber-950 tracking-tight pl-14">
             Get Me a Chai
           </h1>
             <Image
@@ -78,7 +78,8 @@ export default function Home() {
           {/* Card 1 */}
           <div className="bg-amber-300 border border-amber-100 rounded-3xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <div className="w-20 h-20 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow">
-              👨‍💻
+               {/* 👨‍💻  */}
+               <img className="rounded-full" src="/FANS.gif"  alt="" />
             </div>
             <h3 className="font-semibold text-xl text-amber-900 mb-2">Fans want to help</h3>
             <p className="text-gray-600">
@@ -88,8 +89,10 @@ export default function Home() {
 
           {/* Card 2 - Main Highlight */}
           <div className="bg-gradient-to-br from-amber-500 to-amber-600 text-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 scale-105">
-            <div className="w-20 h-20 mx-auto mb-6 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-4xl">
-              ☕
+            <div className="w-20 h-20 mx-auto mb-6 bg-white backdrop-blur rounded-full flex items-center justify-center text-4xl">
+              {/* ☕ */}
+               <img className="rounded-full" src="/cup2.svg"  alt="" />
+              
             </div>
             <h3 className="font-semibold text-2xl mb-2">Buy Me a Chai</h3>
             <p className="opacity-90 mb-6">
@@ -103,7 +106,8 @@ export default function Home() {
           {/* Card 3 */}
           <div className="bg-amber-300 border border-amber-100 rounded-3xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <div className="w-20 h-20 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow">
-              👥
+              {/* 👥 */}
+               <img className="rounded-full" src="/FANS-blue.gif"  alt="" />
             </div>
             <h3 className="font-semibold text-xl text-amber-900 mb-2">Fans want to help</h3>
             <p className="text-gray-600">
